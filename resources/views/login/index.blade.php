@@ -7,7 +7,7 @@
         <div class="card-body login-card-body">
           <p class="login-box-msg">Login dengan username dan password Anda.</p>
 
-          <form action="{{ url('login/proses') }}" method="post">
+          <form action="{{ url('login/proses') }}" method="POST">
           @csrf
 
             <div class="input-group mb-3">
@@ -16,6 +16,7 @@
                 <span class="bi bi-person-fill"></span>
               </div>
             </div>
+
             <div class="input-group mb-3">
               <input type="password" name="password" class="form-control" placeholder="Password" />
               <div class="input-group-text">
@@ -33,7 +34,7 @@
               <!-- /.col -->
               <div class="col-4">
                 <div class="d-grid gap-2">
-                  <button type="submit" class="btn btn-primary">Sign In</button>
+                  <button type="submit" name="submit" value="submit" class="btn btn-primary">Sign In</button>
                 </div>
               </div>
               <!-- /.col -->

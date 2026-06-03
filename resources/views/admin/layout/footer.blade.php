@@ -145,6 +145,61 @@
     </script>
     <!--end::Color Mode Toggle-->
     <!--end::Script-->
+    <!-- script sweetalert -->
+    <script>
+      // sweetalert2 ada di sini gais
+      @if(session('sukses'))
+        Swal.fire({
+          title: 'Berhasil!',
+          text: @json(session('sukses')),
+          icon: 'success',
+          confirmButtonText: 'Mantap'
+        })
+      @endif
+
+      @if(session('warning'))
+        Swal.fire({
+          title: 'Oops!',
+          text: @json(session('warning')),
+          icon: 'warning',
+          confirmButtonText: 'Oops'
+        })
+      @endif
+
+      // proses delete
+      document.addEventListener('DOMContentLoaded', function () {
+
+            document.querySelectorAll('.delete-link').forEach(function(link) {
+
+                link.addEventListener('click', function(e) {
+
+                    e.preventDefault();
+
+                    const url = this.href;
+
+                    Swal.fire({
+                        title: 'Hapus Data?',
+                        text: 'Data yang dihapus tidak dapat dikembalikan.',
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonText: 'Ya, Hapus',
+                        cancelButtonText: 'Batal',
+                        reverseButtons: true
+                    }).then((result) => {
+
+                        if (result.isConfirmed) {
+                            window.location.href = url;
+                        }
+
+                    });
+
+                });
+
+            });
+
+        });
+      // end sweetalert2
+    </script>
   </body>
   <!--end::Body-->
 </html>

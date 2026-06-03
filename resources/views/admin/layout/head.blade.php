@@ -59,5 +59,7 @@
     <!--begin::Required Plugin(AdminLTE)-->
     <link rel="stylesheet" href="{{ asset('assets/admin/css/adminlte.css') }}" />
     <!--end::Required Plugin(AdminLTE)-->
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <!--end::Head-->

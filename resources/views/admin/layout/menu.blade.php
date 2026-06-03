@@ -41,12 +41,20 @@
                 </a>
               </li>
 
+              <!-- dashboard -->
+              <li class="nav-item">
+                <a href="{{ url('admin/parkir') }}" class="nav-link">
+                  <i class="nav-icon bi bi-p-circle-fill"></i>
+                  <p>Transaksi Parkir</p>
+                </a>
+              </li>
+
               <!-- pengguna -->
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="nav-icon bi bi-person-fill-lock"></i>
                   <p>
-                    Pengguna Sistem
+                    Master
                     <i class="nav-arrow bi bi-chevron-right"></i>
                   </p>
                 </a>
@@ -58,15 +66,15 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="{{ url('admin/akses-level' )}}" class="nav-link">
+                    <a href="{{ url('admin/jenis-kendaraan' )}}" class="nav-link">
                       <i class="nav-icon bi bi-circle"></i>
-                      <p>Level Hak Akses</p>
+                      <p>Jenis Kendaraan</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="{{ url('admin/menu') }}" class="nav-link">
+                    <a href="{{ url('admin/pintu-parkir') }}" class="nav-link">
                       <i class="nav-icon bi bi-circle"></i>
-                      <p>Menu dan Sub Menu</p>
+                      <p>Pintu Parkir</p>
                     </a>
                   </li>
                 </ul>
@@ -114,3 +122,14 @@
                 <div class="card">
                   
                   <div class="card-body" style="min-height: 500px;">
+
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <strong>Terdapat kesalahan pada form:</strong>
+                            <ul class="mb-0 mt-2">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
