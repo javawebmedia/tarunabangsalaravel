@@ -19,7 +19,6 @@ class UserSeeder extends Seeder
                 'username'      => 'andoyo',
                 'password'      => sha1('andoyo'),
                 'akses_level'   => 'Admin',
-
                 'created_at'    => now(),
                 'updated_at'    => now(),
             ],
@@ -30,7 +29,6 @@ class UserSeeder extends Seeder
                 'username'      => 'kheira',
                 'password'      => sha1('kheira'),
                 'akses_level'   => 'User',
-
                 'created_at'    => now(),
                 'updated_at'    => now(),
             ],
@@ -41,7 +39,6 @@ class UserSeeder extends Seeder
                 'username'      => 'izra',
                 'password'      => sha1('izra'),
                 'akses_level'   => 'User',
-
                 'created_at'    => now(),
                 'updated_at'    => now(),
             ],
