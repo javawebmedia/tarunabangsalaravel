@@ -21,7 +21,7 @@ return new class extends Migration
             $table->integer('durasi_jam')->default(0);
             $table->integer('durasi_menit')->default(0);
             $table->integer('harga_harian')->default(0);
-            $table->integer('harga_perjam')->default(0)
+            $table->integer('harga_perjam')->default(0);
             $table->integer('total_bayar')->default(0);
             $table->enum('status_bayar', [
                 'Menunggu',
