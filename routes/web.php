@@ -72,4 +72,5 @@ Route::middleware(['checklogin'])->prefix('admin')->name('admin.')->group(functi
 
     // akun
     Route::get('akun', [AkunController::class, 'index']);
+    Route::post('akun/proses-edit', [AkunController::class, 'prosesEdit']);
 });
