@@ -1,0 +1,1 @@
+<p>Halo <strong><em>{{ session()->get('nama') }}</em></strong>, Selamat datang di halaman Dashboard.</p>
