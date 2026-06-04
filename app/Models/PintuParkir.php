@@ -14,4 +14,10 @@ class PintuParkir extends Model
     protected $primaryKey = 'id_pintu_parkir';
     protected $guarded = [];
 
+    // jenis
+    public static function jenis($jenis_pintu)
+    {
+        return self::orderBy('nama_pintu_parkir', 'ASC')->where('jenis_pintu',$jenis_pintu)->get();
+    }
+
 }

@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\AkunController;
 use App\Http\Controllers\Admin\JenisKendaraanController;
 use App\Http\Controllers\Admin\PintuParkirController;
+use App\Http\Controllers\Admin\ParkirController;
 // end panggil controller
 
 // Route::get('/', function () {
@@ -40,6 +41,13 @@ Route::post('proses-ganti-password', [LoginController::class, 'prosesGantiPasswo
 Route::middleware(['checklogin'])->prefix('admin')->name('admin.')->group(function () {
     // dasbor
     Route::get('dasbor', [DasborController::class, 'index']);
+
+    // parkir
+    Route::get('parkir', [ParkirController::class, 'index']);
+    Route::get('parkir/edit/{id}', [ParkirController::class, 'edit']);
+    Route::get('parkir/delete/{id}', [ParkirController::class, 'delete']);
+    Route::post('parkir/proses-tambah', [ParkirController::class, 'prosesTambah']);
+    Route::post('parkir/proses-edit', [ParkirController::class, 'prosesEdit']);
 
     // user
     Route::get('user', [UserController::class, 'index']);

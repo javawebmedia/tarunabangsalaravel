@@ -62,7 +62,7 @@
  <div class="row mb-3">
 	<label class="col-md-3"></label>
 	<div class="col-md-9">
-		<a href="{{ url('admin/user') }}" class="btn btn-secondary">Kembali</a>
+		<a href="{{ url('admin/jenis-kendaraan') }}" class="btn btn-secondary">Kembali</a>
 		<button type="submit" name="submit" value="tambah" class="btn btn-primary">Simpan Data</button>
 	</div>
 </div>

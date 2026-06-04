@@ -22,11 +22,7 @@
 			<th>No</th>
 			<th>Nama</th>
 			<th>Keterangan</th>
-			<th>Durasi Gratis</th>
-			<th>Durasi Parkir Harian</th>
-			<th>Tarif Perjam</th>
-			<th>Tarif Harian</th>
-			<th>Default</th>
+			<th>Jenis</th>
 			<th>Urutan</th>
 			<th></th>
 		</tr>
@@ -35,25 +31,21 @@
 		<?php  $no = 1;foreach($pintuParkir as $row) { ?>
 			<tr>
 				<td class="text-center"><?php echo $no ?></td>
-				<td><?php echo $row->nama_jenis_kendaraan ?></td>
+				<td><?php echo $row->nama_pintu_parkir ?></td>
 				<td><?php echo $row->keterangan ?></td>
-				<td><?php echo $row->durasi_parkir_gratis ?> Menit</td>
-				<td><?php echo $row->durasi_parkir_harian ?> Jam</td>
-				<td><?php echo number_format($row->tarif_perjam) ?></td>
-				<td><?php echo number_format($row->tarif_harian) ?></td>
 				<td>
-					<?php if($row->status_default=='Ya') { ?>
-						<span class="badge text-bg-success"><i class="bi bi-check-circle-fill"></i> <?php echo $row->status_default ?></span>
+					<?php if($row->jenis_pintu=='Masuk') { ?>
+						<span class="badge text-bg-success"><i class="bi bi-box-arrow-in-up"></i> <?php echo $row->jenis_pintu ?></span>
 					<?php }else{ ?>
-						<span class="badge text-bg-secondary"><i class="bi bi-x-circle-fill"></i> <?php echo $row->status_default ?></span>
+						<span class="badge text-bg-warning"><i class="bi bi-box-arrow-down"></i> <?php echo $row->jenis_pintu ?></span>
 					<?php } ?>
 				</td>
 				<td><?php echo $row->urutan ?></td>
 				<td>
-					<a href="{{ url('admin/jenis-kendaraan/edit/'.$row->id_jenis_kendaraan) }}" class="btn btn-sm btn-info">
+					<a href="{{ url('admin/pintu-parkir/edit/'.$row->id_pintu_parkir) }}" class="btn btn-sm btn-info">
 						<i class="bi bi-pencil-square"></i>
 					</a>
-					<a href="{{ url('admin/jenis-kendaraan/delete/'.$row->id_jenis_kendaraan) }}" class="btn btn-sm btn-secondary delete-link">
+					<a href="{{ url('admin/pintu-parkir/delete/'.$row->id_pintu_parkir) }}" class="btn btn-sm btn-secondary delete-link">
 						<i class="bi bi-trash-fill"></i>
 					</a>
 				</td>
@@ -62,4 +54,4 @@
 	</tbody>
 </table>
 
-@include('admin/jenis-kendaraan/tambah')
+@include('admin/pintu-parkir/tambah')

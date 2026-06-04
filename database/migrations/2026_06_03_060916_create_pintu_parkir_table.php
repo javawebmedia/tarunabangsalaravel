@@ -13,25 +13,16 @@ return new class extends Migration
             $table->id('id_pintu_parkir');
             $table->string('nama_pintu_parkir');
             $table->text('keterangan')->nullable();
-
             $table->enum('jenis_pintu', [
                 'Masuk',
                 'Keluar'
             ]);
-
             $table->integer('urutan')->nullable();
-
             $table->unsignedBigInteger('created_by')->nullable();
             $table->unsignedBigInteger('updated_by')->nullable();
             $table->unsignedBigInteger('deleted_by')->nullable();
-
             $table->timestamps();
             $table->softDeletes();
-
-            // $table->foreign('id_user')
-            //     ->references('id_user')
-            //     ->on('users')
-            //     ->cascadeOnUpdate();
         });
     }
 

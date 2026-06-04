@@ -60,12 +60,12 @@ class JenisKendaraanController extends Controller
             'durasi_parkir_harian'  => $request->durasi_parkir_harian,
             'tarif_perjam'          => $request->tarif_perjam,
             'tarif_harian'          => $request->tarif_harian,
-            'created_by'            => session()->get('id_jenis_kendaraan') ?? 1,
-            'updated_by'            => session()->get('id_jenis_kendaraan') ?? 1,
+            'created_by'            => session()->get('id_user') ?? 1,
+            'updated_by'            => session()->get('id_user') ?? 1,
             'created_at'            => now()
         ]);
 
-        return redirect('admin/jenis-kendaraan')->with('sukses', 'Data user berhasil ditambahkan');
+        return redirect('admin/jenis-kendaraan')->with('sukses', 'Data berhasil ditambahkan');
     }
 
     // prosesEdit
@@ -85,16 +85,16 @@ class JenisKendaraanController extends Controller
                         'durasi_parkir_harian'  => $request->durasi_parkir_harian,
                         'tarif_perjam'          => $request->tarif_perjam,
                         'tarif_harian'          => $request->tarif_harian,
-                        'updated_by'            => session()->get('id_jenis_kendaraan') ?? 1,
+                        'updated_by'            => session()->get('id_user') ?? 1,
                         'updated_at'            => now()
                     ]);
-        return redirect('admin/jenis-kendaraan')->with('sukses', 'Data user berhasil diupdate');
+        return redirect('admin/jenis-kendaraan')->with('sukses', 'Data berhasil diupdate');
     }
 
     // delete
     public function delete($id_jenis_kendaraan)
     {
         JenisKendaraan::where(   'id_jenis_kendaraan',$id_jenis_kendaraan)->delete();
-        return redirect('admin/jenis-kendaraan')->with('sukses', 'Data user berhasil dihapus');
+        return redirect('admin/jenis-kendaraan')->with('sukses', 'Data berhasil dihapus');
     }
 }

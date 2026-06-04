@@ -14,4 +14,9 @@ class JenisKendaraan extends Model
     protected $primaryKey = 'id_jenis_kendaraan';
     protected $guarded = [];
 
+    // listing
+    public static function listing()
+    {
+        return self::orderBy('nama_jenis_kendaraan', 'ASC')->get();
+    }
 }

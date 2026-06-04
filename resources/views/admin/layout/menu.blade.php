@@ -52,7 +52,7 @@
               <!-- pengguna -->
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-person-fill-lock"></i>
+                  <i class="nav-icon bi bi-card-checklist"></i>
                   <p>
                     Master
                     <i class="nav-arrow bi bi-chevron-right"></i>
@@ -61,19 +61,19 @@
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
                     <a href="{{ url('admin/user') }}" class="nav-link">
-                      <i class="nav-icon bi bi-circle"></i>
+                      <i class="nav-icon bi bi-arrow-return-right"></i>
                       <p>Pengguna Sistem</p>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="{{ url('admin/jenis-kendaraan' )}}" class="nav-link">
-                      <i class="nav-icon bi bi-circle"></i>
+                      <i class="nav-icon bi bi-arrow-return-right"></i>
                       <p>Jenis Kendaraan</p>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="{{ url('admin/pintu-parkir') }}" class="nav-link">
-                      <i class="nav-icon bi bi-circle"></i>
+                      <i class="nav-icon bi bi-arrow-return-right"></i>
                       <p>Pintu Parkir</p>
                     </a>
                   </li>

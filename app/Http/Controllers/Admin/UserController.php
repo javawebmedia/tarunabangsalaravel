@@ -62,7 +62,7 @@ class UserController extends Controller
             'created_at'        => now()
         ]);
 
-        return redirect('admin/user')->with('sukses', 'Data user berhasil ditambahkan');
+        return redirect('admin/user')->with('sukses', 'Data berhasil ditambahkan');
     }
 
     // prosesEdit
@@ -97,13 +97,13 @@ class UserController extends Controller
                             'updated_at'        => now()
                         ]);
         }
-        return redirect('admin/user')->with('sukses', 'Data user berhasil diupdate');
+        return redirect('admin/user')->with('sukses', 'Data berhasil diupdate');
     }
 
     // delete
     public function delete($id_user)
     {
         Users::where(   'id_user',$id_user)->delete();
-        return redirect('admin/user')->with('sukses', 'Data user berhasil dihapus');
+        return redirect('admin/user')->with('sukses', 'Data berhasil dihapus');
     }
 }

@@ -9,34 +9,20 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('jenis_kendaraan', function (Blueprint $table) {
-
             $table->id('id_jenis_kendaraan');
-
             $table->string('nama_jenis_kendaraan');
             $table->text('keterangan')->nullable();
-
-            $table->enum('status_default', ['Ya', 'Tidak'])
-                ->default('Tidak');
-
+            $table->enum('status_default', ['Ya', 'Tidak'])->default('Tidak');
             $table->integer('urutan')->nullable()->default(0);
-
             $table->integer('durasi_parkir_gratis')->default(0);
             $table->integer('durasi_parkir_harian')->default(0);
-
             $table->integer('tarif_perjam')->default(0);
             $table->integer('tarif_harian')->default(0);
-
             $table->unsignedBigInteger('created_by')->nullable();
             $table->unsignedBigInteger('updated_by')->nullable();
             $table->unsignedBigInteger('deleted_by')->nullable();
-
             $table->timestamps();
             $table->softDeletes();
-
-            // $table->foreign('id_user')
-            //     ->references('id_user')
-            //     ->on('users')
-            //     ->cascadeOnUpdate();
         });
     }
 
