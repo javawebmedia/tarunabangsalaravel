@@ -1,5 +1,3 @@
-
-
 <div class="row">
 	<div class="col-md-12">
 		<div class="card mb-2 mt-2">
@@ -10,7 +8,7 @@
 				<form action="{{ url('admin/parkir/proses-tambah') }}" method="post" accept-charset="utf-8">
 					<div class="row g-3 align-items-stretch">
 
-						<div class="col-md-9">
+						<div class="col-md-3">
 							<div class="row">
 								<div class="col-md-12 mb-2">
 									<div class="form-floating">
@@ -37,8 +35,12 @@
 										<label>Pintu Masuk</label>
 									</div>
 								</div>
+							</div>
+						</div>
 
-								<div class="col-md-4 mb-2">
+						<div class="col-md-3">
+							<div class="row">
+								<div class="col-md-12 mb-2">
 									<div class="form-floating">
 										<input type="date" 
 										name="tanggal_masuk" 
@@ -49,7 +51,7 @@
 									</div>
 								</div>
 
-								<div class="col-md-4 mb-2">
+								<div class="col-md-12 mb-2">
 									<div class="form-floating">
 										<input type="time" 
 										name="jam_masuk" 
@@ -79,8 +81,12 @@
 									// update setiap 1 detik
 									setInterval(updateJamMasuk, 1000);
 								</script>
+							</div>
+						</div>
 
-								<div class="col-md-4 mb-2">
+						<div class="col-md-3">
+							<div class="row">
+								<div class="col-md-12 mb-2">
 									<div class="form-floating">
 										<input type="text" 
 										name="nomor_polisi" 
@@ -89,7 +95,15 @@
 										<label>Nomor Polisi</label>
 									</div>
 								</div>
-
+								<div class="col-md-12 mb-2">
+									<div class="form-floating">
+										<input type="text" 
+										name="keterangan" 
+										class="form-control" 
+										placeholder="Keterangan">
+										<label>Catatan lain</label>
+									</div>
+								</div>
 							</div>
 						</div>
 
@@ -114,7 +128,7 @@
 
 <div class="col-md-12">
 		<div class="card">
-			<div class="card-header bg-body-secondary">
+			<div class="card-header bg-primary-subtle">
 				<strong><i class="bi bi-p-circle-fill"></i> DATA KENDARAAN PARKIR</strong>
 			</div>
 			<div class="card-body">
@@ -323,6 +337,11 @@
 												</div>
 
 						        				
+						        			</td>
+						        		</tr>
+						        		<tr>
+						        			<td>Catatan/Keterangan</td>
+						        			<td><textarea name="keterangan" class="form-control" placeholder="Catatan/Keterangan">{{ $row->keterangan }}</textarea>
 						        			</td>
 						        		</tr>
 						        	</tbody>

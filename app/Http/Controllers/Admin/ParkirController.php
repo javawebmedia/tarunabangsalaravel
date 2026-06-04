@@ -64,6 +64,7 @@ class ParkirController extends Controller
             'tanggal_masuk'       => $tanggal_masuk,
             'tanggal_keluar'      => $tanggal_keluar,
             'status_bayar'        => 'Menunggu',
+            'keterangan'            => $request->keterangan,
             'created_by'          => session()->get('id_user') ?? 1,
         ]);
 
@@ -149,6 +150,7 @@ class ParkirController extends Controller
             'harga_perjam'        => $harga_perjam,
             'total_bayar'         => $total_bayar,
             'status_bayar'        => 'Sudah',
+            'keterangan'            => $request->keterangan,
             'updated_by'          => session()->get('id_user') ?? 1,
         ]);
 
