@@ -29,7 +29,7 @@
 	<div class="col-md-9">
 		<select name="jenis_pintu" class="form-control">
 			<option value="Masuk">Masuk</option>
-			<option value="Keluar" {{ old('jenis_pintu', $pintuParkir->jenis_pintu) == 'Keluar' ? 'selected' : '' }}>Tidak</option>
+			<option value="Keluar" {{ old('jenis_pintu', $pintuParkir->jenis_pintu) == 'Keluar' ? 'selected' : '' }}>Keluar</option>
 		</select>
 	</div>
 </div>
